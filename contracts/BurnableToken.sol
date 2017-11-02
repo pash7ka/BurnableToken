@@ -47,6 +47,7 @@ contract BurnableToken is StandardToken {
         
         _from.transfer(reward);
         Burn(_from, _amount);
+        Transfer(_from, address(0), _amount);
         return true;
     }
 
